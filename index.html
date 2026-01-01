@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>03 العقارية</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+--background:#f5f5f5;
+--foreground:#1c1c1c;
+--primary:#1c1c1c;
+--gold:#c9a24d;
+--accent:#2f6fed;
+--card:#ffffff;
+--border:#ddd;
+--radius:14px;
+font-family:'Cairo',sans-serif;
+}
+
+.dark {
+--background:#1c1c1c;
+--foreground:#f5f5f5;
+--primary:#c9a24d;
+--card:#242424;
+--border:#333;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--background);color:var(--foreground);transition:.3s}
+
+.navbar{
+position:fixed;top:0;width:100%;padding:15px 50px;
+background:var(--card);display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);z-index:1000;
+}
+.logo{font-weight:800;font-size:22px;color:var(--gold);}
+.navbar nav a{margin:0 12px;text-decoration:none;color:var(--foreground);font-weight:600;}
+.toggle{cursor:pointer;padding:8px 14px;border-radius:var(--radius);background:var(--primary);color:#fff;}
+
+.hero{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url("https://images.unsplash.com/photo-1502672260266-1c1ef2d93688") center/cover;
+display:flex;align-items:center;justify-content:center;text-align:center;
+}
+.hero h1{font-size:60px;color:var(--gold);}
+.hero p{color:#fff;margin:20px 0;}
+.btn{background:var(--accent);color:#fff;padding:14px 36px;border-radius:var(--radius);text-decoration:none;font-weight:600;}
+
+section{padding:90px 10%}
+h2{text-align:center;color:var(--gold);margin-bottom:40px}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;}
+.feature{background:var(--card);padding:30px;border-radius:var(--radius);text-align:center;border:1px solid var(--border);}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;}
+.card{background:var(--card);border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);}
+.card img{width:100%;height:200px;object-fit:cover}
+.card h3{padding:15px}
+.card span{color:var(--accent);padding:0 15px 15px;display:block}
+.cta{background:var(--primary);color:#fff;text-align:center;}
+.cta h2{color:#fff}
+footer{background:#000;color:#aaa;text-align:center;padding:20px;}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+<div class="logo">03 العقارية</div>
+<nav>
+<a href="#home">الرئيسية</a>
+<a href="#about">من نحن</a>
+<a href="#properties">العقارات</a>
+<a href="#contact">تواصل</a>
+</nav>
+<div class="toggle" onclick="toggleTheme()">Dark</div>
+</header>
+
+<section id="home" class="hero">
+<div>
+<h1>استثمار عقاري ذكي</h1>
+<p>أفضل الفرص العقارية بثقة وشفافية</p>
+<a class="btn" href="#properties">تصفح العقارات</a>
+</div>
+</section>
+
+<section id="about">
+<h2>لماذا 03 العقارية؟</h2>
+<div class="features">
+<div class="feature">خبرة في السوق</div>
+<div class="feature">شفافية تامة</div>
+<div class="feature">عوائد قوية</div>
+<div class="feature">دعم متكامل</div>
+</div>
+</section>
+
+<section id="properties">
+<h2>عقارات مميزة</h2>
+<div class="cards">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+<h3>فيلا فاخرة</h3>
+<span>3,500,000 AED</span>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994">
+<h3>شقة حديثة</h3>
+<span>1,200,000 AED</span>
+</div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1599423300746-b62533397364">
+<h3>أرض استثمارية</h3>
+<span>2,000,000 AED</span>
+</div>
+</div>
+</section>
+
+<section id="contact" class="cta">
+<h2>تواصل معنا الآن</h2>
+<p>واحصل على استشارة عقارية مجانية</p>
+<a class="btn" href="https://wa.me/971000000000">واتساب</a>
+</section>
+
+<footer>
+© 2026 جميع الحقوق محفوظة – 03 العقارية
+</footer>
+
+<script>
+function toggleTheme(){
+document.documentElement.classList.toggle("dark");
+}
+</script>
+
+</body>
+</html>
