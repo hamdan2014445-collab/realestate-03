@@ -3,10 +3,12 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>03 العقارية</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
-:root {
+:root{
 --background:#f5f5f5;
 --foreground:#1c1c1c;
 --primary:#1c1c1c;
@@ -15,123 +17,238 @@
 --card:#ffffff;
 --border:#ddd;
 --radius:14px;
-font-family:'Cairo',sans-serif;
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--background);color:var(--foreground);transition:.3s}
+body{
+font-family:'Cairo',sans-serif;
+background:var(--background);
+color:var(--foreground);
+}
 
+/* ===== NAVBAR ===== */
 .navbar{
-position:fixed;top:0;width:100%;padding:15px 50px;
-background:var(--card);display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);z-index:1000;
+position:fixed;
+top:0;
+width:100%;
+padding:14px 40px;
+background:var(--card);
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid var(--border);
+z-index:1000;
 }
-.logo{font-weight:800;font-size:22px;color:var(--gold);}
-.navbar nav a{margin:0 12px;text-decoration:none;color:var(--foreground);font-weight:600;}
-.toggle{cursor:pointer;padding:8px 14px;border-radius:var(--radius);background:var(--primary);color:#fff;}
-<img src="zero-three-logo.jpeg" alt="Zero Three Logo">
 
+.logo img{
+height:45px;
+}
+
+.navbar nav a{
+margin:0 14px;
+text-decoration:none;
+color:var(--foreground);
+font-weight:600;
+}
+
+/* ===== HERO ===== */
 .hero{
-height:100vh;
-background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url("https://images.unsplash.com/photo-1502672260266-1c1ef2d93688") center/cover;
-display:flex;align-items:center;justify-content:center;text-align:center;
+min-height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url("https://images.unsplash.com/photo-1502672260266-1c1ef2d93688") center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:0 20px;
 }
-.hero h1{font-size:60px;color:var(--gold);}
-.hero p{color:#fff;margin:20px 0;}
-.btn{background:var(--accent);color:#fff;padding:14px 36px;border-radius:var(--radius);text-decoration:none;font-weight:600;}
 
-section{padding:90px 10%}
-h2{text-align:center;color:var(--gold);margin-bottom:40px}
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;}
-.feature{background:var(--card);padding:30px;border-radius:var(--radius);text-align:center;border:1px solid var(--border);}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;}
-.card{background:var(--card);border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);}
-.card img{width:100%;height:200px;object-fit:cover}
-.card h3{padding:15px}
-.card span{color:var(--accent);padding:0 15px 15px;display:block}
-.cta{background:var(--primary);color:#fff;text-align:center;}
-.cta h2{color:#fff}
-footer{background:#000;color:#aaa;text-align:center;padding:20px;}
+.hero h1{
+font-size:clamp(28px,5vw,56px);
+color:var(--gold);
+font-weight:800;
+}
+
+.hero p{
+color:#fff;
+margin:18px auto 30px;
+font-size:clamp(14px,2.5vw,18px);
+max-width:520px;
+}
+
+.btn{
+background:var(--accent);
+color:#fff;
+padding:14px 36px;
+border-radius:var(--radius);
+text-decoration:none;
+font-weight:600;
+display:inline-block;
+}
+
+/* ===== SECTIONS ===== */
+section{
+padding:100px 8%;
+}
+
+section h2{
+text-align:center;
+color:var(--gold);
+margin-bottom:40px;
+font-size:clamp(22px,4vw,34px);
+}
+
+/* ===== ABOUT ===== */
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:22px;
+}
+
+.feature{
+background:var(--card);
+padding:30px 20px;
+border-radius:var(--radius);
+text-align:center;
+border:1px solid var(--border);
+font-weight:600;
+}
+
+/* ===== PROPERTIES ===== */
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.card{
+background:var(--card);
+border-radius:var(--radius);
+overflow:hidden;
+border:1px solid var(--border);
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.card h3{
+padding:15px;
+font-size:18px;
+}
+
+.card span{
+color:var(--accent);
+padding:0 15px 18px;
+display:block;
+font-weight:600;
+}
+
+/* ===== FOOTER ===== */
+footer{
+background:#000;
+color:#aaa;
+text-align:center;
+padding:20px;
+font-size:14px;
+}
+
+/* ===== WHATSAPP ===== */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:#fff;
+padding:12px 22px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+z-index:1000;
+}
+
+/* ===== MOBILE NAV FIX ===== */
+@media(max-width:768px){
+.navbar{
+padding:12px 20px;
+}
+.navbar nav a{
+margin:0 8px;
+font-size:14px;
+}
+}
 </style>
 </head>
 
 <body>
 
 <header class="navbar">
-<div class="logo">03 العقارية</div>
+<div class="logo">
+<img src="zero-three-logo.jpeg" alt="Zero Three Logo">
+</div>
+
 <nav>
 <a href="#home">الرئيسية</a>
 <a href="#about">من نحن</a>
 <a href="#properties">العقارات</a>
 <a href="#contact">تواصل</a>
 </nav>
-<div class="toggle" onclick="toggleTheme()">Dark</div>
 </header>
 
+<!-- HERO -->
 <section id="home" class="hero">
 <div>
 <h1>استثمار عقاري ذكي</h1>
-<p>أفضل الفرص العقارية بثقة وشفافية</p>
+<p>نقدّم أفضل الفرص العقارية بمعايير عالية من الثقة والشفافية</p>
 <a class="btn" href="#properties">تصفح العقارات</a>
 </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
 <h2>لماذا تختار 03 العقارية؟</h2>
+
 <div class="features">
-<div class="feature">خبرة في السوق</div>
-<div class="feature">شفافية تامة</div>
-<div class="feature">عوائد قوية</div>
-<div class="feature">دعم متكامل</div>
+<div class="feature">خبرة عميقة في السوق العقاري</div>
+<div class="feature">شفافية ومصداقية كاملة</div>
+<div class="feature">عوائد استثمارية قوية</div>
+<div class="feature">دعم واستشارات متكاملة</div>
 </div>
 </section>
 
+<!-- PROPERTIES -->
 <section id="properties">
 <h2>عقارات مميزة</h2>
+
 <div class="cards">
 <div class="card">
-
-<img src="https://luxhabitat.ae/resizedimages/1920w/17580/source/58be9c11da5d13f2868bffcdcd262a21081cbc281fd347666240f5ff0ca9fd6a.jpg" ">
+<img src="https://luxhabitat.ae/resizedimages/1920w/17580/source/58be9c11da5d13f2868bffcdcd262a21081cbc281fd347666240f5ff0ca9fd6a.jpg">
 <h3>فيلا فاخرة</h3>
 <span>20,500,000 AED</span>
 </div>
+
 <div class="card">
-<img src="https://antonovich-design.ae/uploads/page/2025/7/antonovich-design-2025eX0Mw8mTn7H4.jpeg"
+<img src="https://antonovich-design.ae/uploads/page/2025/7/antonovich-design-2025eX0Mw8mTn7H4.jpeg">
 <h3>شقة حديثة</h3>
-<span>5,000,000AED</span>
+<span>5,000,000 AED</span>
 </div>
+
 <div class="card">
-<img src="https://images.bayut.com/thumbnails/807633062-400x300.jpeg" 
+<img src="https://images.bayut.com/thumbnails/807633062-400x300.jpeg">
 <h3>أرض استثمارية</h3>
 <span>4,000,000 AED</span>
 </div>
 </div>
 </section>
-<!-- زر واتساب ثابت -->
-<a href="https://wa.me/9710507155501"
-style="
-position: fixed;
-bottom: 20px; /* المسافة من أسفل الشاشة */
-right: 20px; /* المسافة من يمين الشاشة */
-background: #25D366; /* لون واتساب أخضر */
-color: white;
-padding: 12px 18px;
-border-radius: 50px;
-text-decoration: none;
-font-weight: bold;
-z-index: 1000;
-box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-">
-واتساب
-</a>
+
+<a class="whatsapp" href="https://wa.me/9710507155501">واتساب</a>
+
 <footer>
 © 2026 جميع الحقوق محفوظة – 03 العقارية
 </footer>
-
-<script>
-function toggleTheme(){
-document.documentElement.classList.toggle("dark");
-}
-</script>
 
 </body>
 </html>
